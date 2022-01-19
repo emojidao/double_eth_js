@@ -1,4 +1,4 @@
-# double_js
+# double_eth
 A JavaScript library for double. With double_eth,you can easily get the info of doNFT,Duration,tokens of owner,etc...
 
 Published on [GitHub](https://github.com/emojidao/double_eth) and [npm](https://www.npmjs.com/package/double_eth)

@@ -1,10 +1,10 @@
 {
   "name": "double_eth",
-  "version": "1.1.1",
-  "description": "sdk",
+  "version": "1.1.2",
+  "description": "A JavaScript library for double. With double_eth,you can easily get the info of doNFT,Duration,tokens of owner,etc...",
   "main": "./lib/index.js",
   "keywords": [
-    "double_eth","typescript"
+    "double_eth","typescript","double"
   ],
   "author": "Double Developers",
   "license": "MIT",
