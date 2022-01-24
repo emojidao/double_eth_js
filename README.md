@@ -1,4 +1,4 @@
-# double_eth
+# double_eth_js
 A JavaScript library for double. With double_eth,you can easily get the info of doNFT,Duration,tokens of owner,etc...
 
 Published on [GitHub](https://github.com/emojidao/double_eth) and [npm](https://www.npmjs.com/package/double_eth)
@@ -66,9 +66,9 @@ let isValid = await Double.isOriginalValidNow(contract, landId);
 console.log("isOriginalValidNow:", isValid);
 
 ```
-In a browser with web3 or an extension like [MetaMask](https://metamask.io/) or [Dapper](http://www.meetdapper.com/), you can use `window.ethereum` (or `window.web3.currentProvider` for legacy mobile web3 browsers) to access the native provider.
-License
 -------
+In a browser with web3 or an extension like [MetaMask](https://metamask.io/) or [Dapper](http://www.meetdapper.com/), you can use `window.ethereum` (or `window.web3.currentProvider` for legacy mobile web3 browsers) to access the native provider.
 
+## License
 MIT License (including **all** dependencies).
 
