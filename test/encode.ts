@@ -13,34 +13,10 @@ let web3 = new Web3(new Web3.providers.HttpProvider(bsct_url));
 var contract = new web3.eth.Contract(DONFT_ABI, DONFT_LAND);
 
 async function main() {
-    let landId = "340282366920938463463374607431768211458";
-    let tokenId = 2;
-    let durationId = 2;
-    let duration;
-    
-    let info = await DoNFT.getDoNftInfo(contract, tokenId);
-    console.log("info", info);
-    
-    duration = await DoNFT.getDuration(contract, durationId);
-    console.log("duration", duration);
+    let landId = "30625413022884461711703714668859139031114";
+    let data = contract.methods.mintWNft(landId).encodeABI()
 
-    duration = await DoNFT.getDurationByIndex(contract, tokenId, 0);
-    console.log("duration", duration);
-
-    let durationIds = await DoNFT.getDurationIdList(contract, tokenId);
-    console.log("getDurationIdList:", durationIds);
-
-    let originalAddress = await DoNFT.getOriginalNftAddress(contract);
-    console.log("getOriginalNftAddress:", originalAddress);
-
-    let oid = await DoNFT.getOriginalNftId(contract, tokenId);
-    console.log("getOriginalNftId:", oid);
-
-    let user = await DoNFT.getUser(contract, tokenId);
-    console.log("getUser:", user);
-
-    let vNftId = await DoNFT.getVNftId(contract, landId);
-    console.log("getVNftId:", vNftId);
+    console.log("data", data);
 
 }
 

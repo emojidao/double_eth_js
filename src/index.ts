@@ -1,6 +1,6 @@
 "use strict";
 
-import * as double from "./double";
+import * as DoNFT from "./DoNFT";
 
-export { double };
+export { DoNFT };
 

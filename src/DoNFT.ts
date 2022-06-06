@@ -1,6 +1,6 @@
 "use strict";
 
-export class Double {
+export class DoNFT {
 
     public static async getDuration(contract:any,durationId:any): Promise<any> {
         let start_end = await contract.methods.getDuration(durationId).call();
@@ -29,19 +29,12 @@ export class Double {
         let id = await contract.methods.getXNftId(originalNftId).call();
         return id;
     }
-    public static async getWNftId(contract:any,originalNftId:any): Promise<any> {
-        let id = await contract.methods.getXNftId(originalNftId).call();
-        return id;
-    }
 
     public static async isVNft(contract:any,tokenId:any): Promise<any> {
         let bool = await contract.methods.isXNft(tokenId).call();
         return bool;
     }
-    public static async isWNft(contract:any,tokenId:any): Promise<any> {
-        let bool = await contract.methods.isXNft(tokenId).call();
-        return bool;
-    }
+    
     public static async isValidNow(contract:any,tokenId:any): Promise<any> {
         let bool = await contract.methods.isValidNow(tokenId).call();
         return bool;
@@ -58,29 +51,5 @@ export class Double {
         let user = await contract.methods.getUser(tokenId).call();
         return user;
     }
-
-    public static async getTokensOfOwner(contract:any,address:any, from: number, to: number): Promise<any> {
-        let ids:any[] = [];
-        let balance = await contract.methods.balanceOf(address).call();
-        if (from >= balance) return ids;
-        if (to <= 0 || to > balance) {
-            to = balance
-        }
-        for (let index = from; index < balance; index++) {
-            let id = await contract.methods.tokenOfOwnerByIndex(address, index).call();
-            ids.push(id);
-        }
-        return ids;
-    }
-
-    public static async isOriginalValidNow(contract:any,originalNftId:any): Promise<any> {
-        let tokenId = await contract.methods.getXNftId(originalNftId).call();
-        if (tokenId == 0) return true;
-        let bool = await contract.methods.isValidNow(tokenId).call();
-        return bool;
-    }
-
-
-
 
 }
